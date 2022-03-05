@@ -44,11 +44,11 @@ jobs:
           ps aux | grep nginx
           ps aux | grep httpd
           bin/tinyhttpd 9090 &
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:80/
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:8080/
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:9090/
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:80/404
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:8080/404
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:9090/404
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:8080/ping
-          bin/wrk -c 100 -t 2 -d 10s http://127.0.0.1:9090/ping
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:80/
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:8080/
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:9090/
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:80/404
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:8080/404
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:9090/404
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:8080/ping
+          bin/wrk -c 1000 -t 2 -d 10s http://127.0.0.1:9090/ping
